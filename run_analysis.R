@@ -38,6 +38,6 @@ data[["activity"]]<- rep(1:6)
 data["activity"] <- factor(data$activity, labels = 
         c("WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "STANDING", "LAYING"))
 data[["subject"]]<- rep(1:6, each=30)
-
+data <- data[, c(80, 81, 1:79)]
 
 write.table(data, "tidy.txt", row.names = FALSE) 
